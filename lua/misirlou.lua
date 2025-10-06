@@ -15,7 +15,7 @@ local function set_highlights()
         fg = fg or groups.border
         return {
             fg = fg,
-            bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.surface
+            bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.bg
                 or "NONE",
         }
     end
@@ -78,11 +78,11 @@ local function set_highlights()
         IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
     }
     local default_highlights = {
-        ColorColumn = { bg = palette.surface },
+        ColorColumn = { bg = palette.bg },
         Conceal = { bg = "NONE" },
         CurSearch = { fg = palette.base, bg = palette.gold },
         Cursor = { fg = palette.text, bg = palette.highlight_high },
-        CursorColumn = { bg = palette.overlay },
+        CursorColumn = { bg = palette.bg },
         -- CursorIM = {},
         CursorLine = { bg = palette.highlight_low },
         CursorLineNr = { fg = palette.text, bold = styles.bold },
@@ -96,12 +96,12 @@ local function set_highlights()
         diffChanged = { link = "DiffChange" },
         diffRemoved = { link = "DiffDelete" },
         Directory = { fg = palette.lavender, bold = styles.bold },
-        -- EndOfBuffer = {},
+        EndOfBuffer = { fg = palette.muted, bg = palette.bg },
         ErrorMsg = { fg = groups.error, bold = styles.bold },
         FloatBorder = { fg = palette.subtle, bg = palette.bg },
         FloatTitle = { fg = palette.text, bg = palette.bg },
         FoldColumn = { fg = palette.muted },
-        Folded = { fg = palette.text, bg = groups.panel },
+        Folded = { fg = palette.text, bg = palette.bg },
         IncSearch = { fg = palette.base, bg = palette.rose },
         LineNr = { fg = palette.muted },
         MatchParen = { fg = palette.blue, bg = palette.blue, blend = 25 },
@@ -110,15 +110,15 @@ local function set_highlights()
         NonText = { fg = palette.muted },
         Normal = { fg = palette.text, bg = palette.bg },
         NormalFloat = { fg = palette.text, bg = palette.bg },
-        NormalNC = { fg = palette.text, bg = config.options.dim_inactive_windows and palette.nc or palette.base },
+        NormalNC = { fg = palette.text, bg = palette.bg },
         NvimInternalError = { link = "ErrorMsg" },
-        Pmenu = { fg = palette.subtle, bg = groups.panel },
-        PmenuExtra = { fg = palette.muted, bg = groups.panel },
-        PmenuExtraSel = { fg = palette.subtle, bg = palette.overlay },
-        PmenuKind = { fg = palette.lavender, bg = groups.panel },
-        PmenuKindSel = { fg = palette.subtle, bg = palette.overlay },
-        PmenuSbar = { bg = groups.panel },
-        PmenuSel = { fg = palette.text, bg = palette.overlay },
+        Pmenu = { fg = palette.subtle, bg = palette.bg },
+        PmenuExtra = { fg = palette.muted, bg = palette.bg },
+        PmenuExtraSel = { fg = palette.subtle, bg = palette.highlight_low },
+        PmenuKind = { fg = palette.lavender, bg = palette.bg },
+        PmenuKindSel = { fg = palette.subtle, bg = palette.highlight_low },
+        PmenuSbar = { bg = palette.bg },
+        PmenuSel = { fg = palette.text, bg = palette.highlight_low },
         PmenuThumb = { bg = palette.muted },
         Question = { fg = palette.gold },
         QuickFixLine = { fg = palette.lavender },
@@ -133,24 +133,24 @@ local function set_highlights()
         SpellCap = { sp = palette.subtle, undercurl = true },
         SpellLocal = { sp = palette.subtle, undercurl = true },
         SpellRare = { sp = palette.subtle, undercurl = true },
-        StatusLine = { fg = palette.subtle, bg = groups.panel },
-        StatusLineNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
+        StatusLine = { fg = palette.subtle, bg = palette.bg },
+        StatusLineNC = { fg = palette.muted, bg = palette.bg, blend = 60 },
         StatusLineTerm = { fg = palette.base, bg = palette.blue },
         StatusLineTermNC = { fg = palette.base, bg = palette.blue, blend = 60 },
         Substitute = { link = "IncSearch" },
-        TabLine = { fg = palette.subtle, bg = groups.panel },
-        TabLineFill = { bg = groups.panel },
-        TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+        TabLine = { fg = palette.subtle, bg = palette.bg },
+        TabLineFill = { bg = palette.bg },
+        TabLineSel = { fg = palette.text, bg = palette.highlight_low, bold = styles.bold },
         Title = { fg = palette.lavender, bold = styles.bold },
         VertSplit = { fg = groups.border },
-        Visual = { bg = "#6f6fca" },
+        Visual = { bg = palette.blue, blend = 15 },
         YankHighlight = { fg = palette.lavender, bg = palette.subtle, blend = 50 },
         -- VisualNOS = {},
         WarningMsg = { fg = groups.warn, bold = styles.bold },
         -- Whitespace = {},
         WildMenu = { link = "IncSearch" },
-        WinBar = { fg = palette.subtle, bg = groups.panel },
-        WinBarNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
+        WinBar = { fg = palette.subtle, bg = palette.bg },
+        WinBarNC = { fg = palette.muted, bg = palette.bg, blend = 60 },
         WinSeparator = { fg = groups.border },
 
         DiagnosticError = { fg = groups.error },
@@ -435,11 +435,11 @@ local function set_highlights()
 
         --- Plugins
         -- romgrk/barbar.nvim
-        BufferCurrent = { fg = palette.text, bg = palette.overlay },
-        BufferCurrentIndex = { fg = palette.text, bg = palette.overlay },
-        BufferCurrentMod = { fg = palette.lavender, bg = palette.overlay },
-        BufferCurrentSign = { fg = palette.subtle, bg = palette.overlay },
-        BufferCurrentTarget = { fg = palette.gold, bg = palette.overlay },
+        BufferCurrent = { fg = palette.text, bg = palette.highlight_low },
+        BufferCurrentIndex = { fg = palette.text, bg = palette.highlight_low },
+        BufferCurrentMod = { fg = palette.lavender, bg = palette.highlight_low },
+        BufferCurrentSign = { fg = palette.subtle, bg = palette.highlight_low },
+        BufferCurrentTarget = { fg = palette.gold, bg = palette.highlight_low },
         BufferInactive = { fg = palette.subtle },
         BufferInactiveIndex = { fg = palette.subtle },
         BufferInactiveMod = { fg = palette.lavender },
@@ -487,7 +487,7 @@ local function set_highlights()
         NvimTreeGitStaged = { fg = groups.git_stage },
         NvimTreeImageFile = { fg = palette.text },
         NvimTreeNormal = { link = "Normal" },
-        NvimTreeOpenedFile = { fg = palette.text, bg = palette.overlay },
+        NvimTreeOpenedFile = { fg = palette.text, bg = palette.highlight_low },
         NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
         NvimTreeRootFolder = { fg = palette.lavender, bold = styles.bold },
         NvimTreeSpecialFile = { link = "NvimTreeNormal" },
@@ -521,7 +521,7 @@ local function set_highlights()
         NeoTreeGitModified = { fg = groups.git_dirty },
         NeoTreeGitRenamed = { fg = groups.git_rename },
         NeoTreeGitUntracked = { fg = groups.git_untracked },
-        NeoTreeTabActive = { fg = palette.text, bg = palette.overlay },
+        NeoTreeTabActive = { fg = palette.text, bg = palette.highlight_low },
         NeoTreeTabInactive = { fg = palette.subtle },
         NeoTreeTabSeparatorActive = { link = "WinSeparator" },
         NeoTreeTabSeparatorInactive = { link = "WinSeparator" },
@@ -534,7 +534,7 @@ local function set_highlights()
         WhichKey = { fg = palette.purple },
         WhichKeyBorder = make_border(),
         WhichKeyDesc = { fg = palette.gold },
-        WhichKeyFloat = { bg = groups.panel },
+        WhichKeyFloat = { bg = palette.bg },
         WhichKeyGroup = { fg = palette.lavender },
         WhichKeyIcon = { fg = palette.blue },
         WhichKeyIconAzure = { fg = palette.blue },
@@ -580,11 +580,11 @@ local function set_highlights()
         NeogitChangeRenamed = { fg = groups.git_rename, bold = styles.bold, italic = styles.italic },
         NeogitChangeUpdated = { fg = groups.git_change, bold = styles.bold, italic = styles.italic },
         NeogitDiffAddHighlight = { link = "DiffAdd" },
-        NeogitDiffContextHighlight = { bg = palette.surface },
+        NeogitDiffContextHighlight = { bg = palette.bg },
         NeogitDiffDeleteHighlight = { link = "DiffDelete" },
         NeogitFilePath = { fg = palette.lavender, italic = styles.italic },
-        NeogitHunkHeader = { bg = groups.panel },
-        NeogitHunkHeaderHighlight = { bg = groups.panel },
+        NeogitHunkHeader = { bg = palette.bg },
+        NeogitHunkHeaderHighlight = { bg = palette.bg },
 
         -- vimwiki/vimwiki
         VimwikiHR = { fg = palette.subtle },
@@ -619,7 +619,7 @@ local function set_highlights()
         DefinitionIcon = { fg = palette.rose },
         DefinitionPreviewTitle = { fg = palette.rose, bold = styles.bold },
         LspFloatWinBorder = make_border(),
-        LspFloatWinNormal = { bg = groups.panel },
+        LspFloatWinNormal = { bg = palette.bg },
         LspSagaAutoPreview = { fg = palette.subtle },
         LspSagaCodeActionBorder = make_border(palette.rose),
         LspSagaCodeActionContent = { fg = palette.lavender },
@@ -639,11 +639,11 @@ local function set_highlights()
         LspSagaSignatureHelpBorder = make_border(palette.lavender),
         ReferencesCount = { fg = palette.rose },
         ReferencesIcon = { fg = palette.rose },
-        SagaShadow = { bg = palette.overlay },
+        SagaShadow = { bg = palette.bg },
         TargetWord = { fg = palette.purple },
 
         -- ray-x/lsp_signature.nvim
-        LspSignatureActiveParameter = { bg = palette.overlay },
+        LspSignatureActiveParameter = { bg = palette.highlight_low },
 
         -- rlane/pounce.nvim
         PounceAccept = { fg = palette.red, bg = palette.red, blend = 20 },
@@ -669,15 +669,15 @@ local function set_highlights()
         TelescopeNormal = { link = "NormalFloat" },
         TelescopePromptNormal = { link = "TelescopeNormal" },
         TelescopePromptPrefix = { fg = palette.subtle },
-        TelescopeSelection = { fg = palette.text, bg = palette.overlay },
-        TelescopeSelectionCaret = { fg = palette.rose, bg = palette.overlay },
+        TelescopeSelection = { fg = palette.text, bg = palette.highlight_low },
+        TelescopeSelectionCaret = { fg = palette.rose, bg = palette.highlight_low },
         TelescopeTitle = { fg = palette.lavender, bold = styles.bold },
 
         -- ibhagwan/fzf-lua
         FzfLuaBorder = make_border(),
         FzfLuaBufFlagAlt = { fg = palette.subtle },
         FzfLuaBufFlagCur = { fg = palette.subtle },
-        FzfLuaCursorLine = { fg = palette.text, bg = palette.overlay },
+        FzfLuaCursorLine = { fg = palette.text, bg = palette.highlight_low },
         FzfLuaFilePart = { fg = palette.text },
         FzfLuaHeaderBind = { fg = palette.rose },
         FzfLuaHeaderText = { fg = palette.red },
@@ -771,8 +771,20 @@ local function set_highlights()
 
         -- folke/trouble.nvim
         TroubleText = { fg = palette.subtle },
-        TroubleCount = { fg = palette.purple, bg = palette.surface },
-        TroubleNormal = { fg = palette.text, bg = groups.panel },
+        TroubleCount = { fg = palette.purple, bg = palette.bg },
+        TroubleNormal = { fg = palette.text, bg = palette.bg },
+        TroubleNormalNC = { fg = palette.text, bg = palette.bg },
+        TroubleCursor = { bg = palette.bg },
+        TroubleCursorLine = { bg = palette.bg },
+        TroublePos = { fg = palette.subtle, bg = palette.bg },
+        TroubleLocation = { fg = palette.subtle, bg = palette.bg },
+        TroubleCode = { fg = palette.text, bg = palette.bg },
+        TroubleFile = { fg = palette.lavender, bg = palette.bg },
+        TroubleIndent = { fg = palette.muted, bg = palette.bg },
+        TroubleSignError = { fg = palette.red, bg = palette.bg },
+        TroubleSignWarning = { fg = palette.gold, bg = palette.bg },
+        TroubleSignInformation = { fg = palette.lavender, bg = palette.bg },
+        TroubleSignHint = { fg = palette.purple, bg = palette.bg },
 
         -- echasnovski/mini.nvim
         MiniAnimateCursor = { reverse = true, nocombine = true },
@@ -784,7 +796,7 @@ local function set_highlights()
         MiniClueNextKey = { link = "DiagnosticFloatingHint" },
         MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" },
         MiniClueSeparator = { link = "DiagnosticFloatingInfo" },
-        MiniClueTitle = { bg = groups.panel, bold = styles.bold },
+        MiniClueTitle = { bg = palette.bg, bold = styles.bold },
 
         MiniCompletionActiveParameter = { underline = true },
 
@@ -804,7 +816,7 @@ local function set_highlights()
 
         MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
         MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
-        MiniDiffOverContext = { bg = palette.surface },
+        MiniDiffOverContext = { bg = palette.bg },
         MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
         MiniDiffSignAdd = { fg = groups.git_add },
         MiniDiffSignChange = { fg = groups.git_change },
@@ -817,7 +829,7 @@ local function set_highlights()
         MiniFilesFile = { fg = palette.text },
         MiniFilesNormal = { link = "NormalFloat" },
         MiniFilesTitle = { link = "FloatTitle" },
-        MiniFilesTitleFocused = { fg = palette.rose, bg = groups.panel, bold = styles.bold },
+        MiniFilesTitleFocused = { fg = palette.rose, bg = palette.bg, bold = styles.bold },
 
         MiniHipatternsFixme = { fg = palette.base, bg = groups.error, bold = styles.bold },
         MiniHipatternsHack = { fg = palette.base, bg = groups.warn, bold = styles.bold },
@@ -841,7 +853,7 @@ local function set_highlights()
 
         MiniJump2dDim = { fg = palette.subtle },
         MiniJump2dSpot = { fg = palette.gold, bold = styles.bold, nocombine = true },
-        MiniJump2dSpotAhead = { fg = palette.lavender, bg = palette.surface, nocombine = true },
+        MiniJump2dSpotAhead = { fg = palette.lavender, bg = palette.bg, nocombine = true },
         MiniJump2dSpotUnique = { fg = palette.rose, bold = styles.bold, nocombine = true },
 
         MiniMapNormal = { link = "NormalFloat" },
@@ -857,7 +869,7 @@ local function set_highlights()
 
         MiniPickBorder = { link = "FloatBorder" },
         MiniPickBorderBusy = { link = "DiagnosticFloatingWarn" },
-        MiniPickBorderText = { bg = groups.panel },
+        MiniPickBorderText = { bg = palette.bg },
         MiniPickIconDirectory = { link = "Directory" },
         MiniPickIconFile = { link = "MiniPickNormal" },
         MiniPickHeader = { link = "DiagnosticFloatingHint" },
@@ -867,7 +879,7 @@ local function set_highlights()
         MiniPickNormal = { link = "NormalFloat" },
         MiniPickPreviewLine = { link = "CursorLine" },
         MiniPickPreviewRegion = { link = "IncSearch" },
-        MiniPickPrompt = { bg = groups.panel, bold = styles.bold },
+        MiniPickPrompt = { bg = palette.bg, bold = styles.bold },
 
         MiniStarterCurrent = { nocombine = true },
         MiniStarterFooter = { fg = palette.subtle },
@@ -879,9 +891,9 @@ local function set_highlights()
         MiniStarterSection = { fg = palette.rose },
         MiniStarterQuery = { link = "MoreMsg" },
 
-        MiniStatuslineDevinfo = { fg = palette.subtle, bg = palette.overlay },
+        MiniStatuslineDevinfo = { fg = palette.subtle, bg = palette.bg },
         MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
-        MiniStatuslineFilename = { fg = palette.muted, bg = palette.surface },
+        MiniStatuslineFilename = { fg = palette.muted, bg = palette.bg },
         MiniStatuslineInactive = { link = "MiniStatuslineFilename" },
         MiniStatuslineModeCommand = { fg = palette.base, bg = palette.red, bold = styles.bold },
         MiniStatuslineModeInsert = { fg = palette.base, bg = palette.lavender, bold = styles.bold },
@@ -892,14 +904,14 @@ local function set_highlights()
 
         MiniSurround = { link = "IncSearch" },
 
-        MiniTablineCurrent = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+        MiniTablineCurrent = { fg = palette.text, bg = palette.highlight_low, bold = styles.bold },
         MiniTablineFill = { link = "TabLineFill" },
-        MiniTablineHidden = { fg = palette.subtle, bg = groups.panel },
+        MiniTablineHidden = { fg = palette.subtle, bg = palette.bg },
         MiniTablineModifiedCurrent = { fg = palette.overlay, bg = palette.text, bold = styles.bold },
         MiniTablineModifiedHidden = { fg = groups.panel, bg = palette.subtle },
         MiniTablineModifiedVisible = { fg = groups.panel, bg = palette.text },
         MiniTablineTabpagesection = { link = "Search" },
-        MiniTablineVisible = { fg = palette.text, bg = groups.panel },
+        MiniTablineVisible = { fg = palette.text, bg = palette.bg },
 
         MiniTestEmphasis = { bold = styles.bold },
         MiniTestFail = { fg = palette.red, bold = styles.bold },
@@ -917,8 +929,8 @@ local function set_highlights()
         CopilotSuggestion = { fg = palette.muted, italic = styles.italic },
 
         -- nvim-treesitter/nvim-treesitter-context
-        TreesitterContext = { bg = palette.overlay },
-        TreesitterContextLineNumber = { fg = palette.rose, bg = palette.overlay },
+        TreesitterContext = { bg = palette.bg },
+        TreesitterContextLineNumber = { fg = palette.rose, bg = palette.bg },
 
         -- RRethy/vim-illuminate
         IlluminatedWordRead = { link = "LspReferenceRead" },
@@ -937,8 +949,8 @@ local function set_highlights()
         -- MeanderingProgrammer/render-markdown.nvim
         RenderMarkdownBullet = { fg = palette.rose },
         RenderMarkdownChecked = { fg = palette.lavender },
-        RenderMarkdownCode = { bg = palette.overlay },
-        RenderMarkdownCodeInline = { fg = palette.text, bg = palette.overlay },
+        RenderMarkdownCode = { bg = palette.bg },
+        RenderMarkdownCodeInline = { fg = palette.text, bg = palette.bg },
         RenderMarkdownDash = { fg = palette.muted },
         RenderMarkdownH1Bg = { bg = groups.h1, blend = 20 },
         RenderMarkdownH2Bg = { bg = groups.h2, blend = 20 },
@@ -979,7 +991,7 @@ local function set_highlights()
         AvanteReversedSubtitle = { fg = palette.lavender },
         AvanteThirdTitle = { fg = palette.highlight_med, bg = palette.purple },
         AvanteReversedThirdTitle = { fg = palette.purple },
-        AvantePromptInput = { fg = palette.text, bg = groups.panel },
+        AvantePromptInput = { fg = palette.text, bg = palette.bg },
         AvantePromptInputBorder = { fg = groups.border },
 
         -- Saghen/blink.cmp
@@ -1056,8 +1068,8 @@ local function set_highlights()
         -- sindrets/diffview.nvim
         DiffviewPrimary = { fg = palette.blue },
         DiffviewSecondary = { fg = palette.lavender },
-        DiffviewNormal = { fg = palette.text, bg = palette.surface },
-        DiffviewWinSeparator = { fg = palette.text, bg = palette.surface },
+        DiffviewNormal = { fg = palette.text, bg = palette.bg },
+        DiffviewWinSeparator = { fg = palette.text, bg = palette.bg },
 
         DiffviewFilePanelTitle = { fg = palette.lavender, bold = styles.bold },
         DiffviewFilePanelCounter = { fg = palette.rose },
@@ -1187,7 +1199,7 @@ local function set_highlights()
         end
 
         if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 100) and highlight.bg ~= nil then
-            highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.blend / 100)
+            highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.bg, highlight.blend / 100)
         end
 
         highlight.blend = nil
