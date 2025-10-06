@@ -15,8 +15,7 @@ local function set_highlights()
         fg = fg or groups.border
         return {
             fg = fg,
-            bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.bg
-                or "NONE",
+            bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.bg or "NONE",
         }
     end
 
@@ -770,21 +769,35 @@ local function set_highlights()
         NoiceCursor = { fg = palette.highlight_high, bg = palette.text },
 
         -- folke/trouble.nvim
-        TroubleText = { fg = palette.subtle },
-        TroubleCount = { fg = palette.purple, bg = palette.bg },
+        -- Main backgrounds - THIS IS KEY for Trouble!
         TroubleNormal = { fg = palette.text, bg = palette.bg },
         TroubleNormalNC = { fg = palette.text, bg = palette.bg },
+        -- Cursor - prevents highlight_low from showing
         TroubleCursor = { bg = palette.bg },
         TroubleCursorLine = { bg = palette.bg },
+        -- Text and content
+        TroubleText = { fg = palette.subtle, bg = palette.bg },
+        TroubleTextHover = { fg = palette.text, bg = palette.bg },
+        TroubleCount = { fg = palette.purple, bg = palette.bg },
+        TroubleCode = { fg = palette.text, bg = palette.bg },
+        -- File info
         TroublePos = { fg = palette.subtle, bg = palette.bg },
         TroubleLocation = { fg = palette.subtle, bg = palette.bg },
-        TroubleCode = { fg = palette.text, bg = palette.bg },
         TroubleFile = { fg = palette.lavender, bg = palette.bg },
+        TroubleDirectory = { fg = palette.lavender, bg = palette.bg },
+        TroubleSource = { fg = palette.subtle, bg = palette.bg },
+        TroubleBasename = { fg = palette.lavender, bg = palette.bg },
+        TroubleDirname = { fg = palette.muted, bg = palette.bg },
+        -- Indent guides
         TroubleIndent = { fg = palette.muted, bg = palette.bg },
+        TroubleIndentFoldClosed = { fg = palette.muted, bg = palette.bg },
+        TroubleIndentFoldOpen = { fg = palette.muted, bg = palette.bg },
+        -- Diagnostic signs
         TroubleSignError = { fg = palette.red, bg = palette.bg },
         TroubleSignWarning = { fg = palette.gold, bg = palette.bg },
         TroubleSignInformation = { fg = palette.lavender, bg = palette.bg },
         TroubleSignHint = { fg = palette.purple, bg = palette.bg },
+        TroubleSignOther = { fg = palette.purple, bg = palette.bg },
 
         -- echasnovski/mini.nvim
         MiniAnimateCursor = { reverse = true, nocombine = true },
