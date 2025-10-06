@@ -14,6 +14,10 @@ misirlou.nvim is a dark Neovim colorscheme featuring deep midnight tones and car
 
 This theme builds upon the excellent work of the [Rosé Pine](https://github.com/rose-pine/neovim) project. The core architecture, highlight group definitions, and plugin integrations are derived from rose-pine/neovim. misirlou.nvim adapts these foundations with its own unique color palette and aesthetic direction.
 
+## Preview
+
+![Misirlou Theme Showcase](showcase.png)
+
 ## Getting Started
 
 ### Installation
@@ -26,7 +30,7 @@ Install `misirlou.nvim` using your favorite package manager:
 
 ```lua
 return {
-    "popmpos02/misirlou.nvim",
+    "pompos02/misirlou.nvim",
     name = "misirlou.nvim",
     config = function()
         vim.cmd("colorscheme misirlou.nvim")
@@ -37,19 +41,19 @@ return {
 **Single file**
 
 ```lua
-{ "popmpos02/misirlou.nvim", name = "misirlou" }
+{ "pompos02/misirlou.nvim", name = "misirlou" }
 ```
 
 #### [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use { "popmpos02/misirlou.nvim", as = "misirlou" }
+use { "pompos02/misirlou.nvim", as = "misirlou" }
 ```
 
 #### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'popmpos02/misirlou.nvim', { 'as': 'misirlou' }
+Plug 'pompos02/misirlou.nvim', { 'as': 'misirlou' }
 ```
 
 ## Configuration
