@@ -6,6 +6,8 @@
 
 ## Preview
 
+![Misirlou Theme Showcase](showcase.png)
+
 ## About
 
 misirlou.nvim is a dark Neovim colorscheme featuring deep midnight tones and carefully balanced contrast. Built on the foundations of [rose-pine/neovim](https://github.com/rose-pine/neovim), it reimagines the color palette with darker backgrounds and sophisticated accent colors while maintaining the thoughtful structure and extensive plugin support of its inspiration.
@@ -13,10 +15,6 @@ misirlou.nvim is a dark Neovim colorscheme featuring deep midnight tones and car
 ## Credits
 
 This theme builds upon the excellent work of the [Rosé Pine](https://github.com/rose-pine/neovim) project. The core architecture, highlight group definitions, and plugin integrations are derived from rose-pine/neovim. misirlou.nvim adapts these foundations with its own unique color palette and aesthetic direction.
-
-## Preview
-
-![Misirlou Theme Showcase](showcase.png)
 
 ## Getting Started
 
@@ -31,9 +29,9 @@ Install `misirlou.nvim` using your favorite package manager:
 ```lua
 return {
     "pompos02/misirlou.nvim",
-    name = "misirlou.nvim",
+    name = "misirlou",
     config = function()
-        vim.cmd("colorscheme misirlou.nvim")
+        vim.cmd("colorscheme misirlou")
     end
 }
 ```
@@ -64,7 +62,7 @@ Plug 'pompos02/misirlou.nvim', { 'as': 'misirlou' }
 misirlou.nvim inherits the configuration structure from Rosé Pine. Customize the theme by calling `setup()` before applying the colorscheme:
 
 ```lua
-require("misirlou.nvim").setup({
+require("misirlou").setup({
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
 
@@ -144,7 +142,7 @@ require("misirlou.nvim").setup({
     end,
 })
 
-vim.cmd("colorscheme misirlou.nvim")
+vim.cmd("colorscheme misirlou")
 ```
 
 ## Palette
