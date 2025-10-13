@@ -83,7 +83,7 @@ local function set_highlights()
         Cursor = { fg = palette.text, bg = palette.highlight_high },
         CursorColumn = { bg = palette.bg },
         -- CursorIM = {},
-        CursorLine = { bg = palette.highlight_low },
+        CursorLine = { bg = palette.surface },
         CursorLineNr = { fg = palette.text, bg = palette.bg, bold = styles.bold },
         -- DarkenedPanel = { },
         -- DarkenedStatusline = {},
