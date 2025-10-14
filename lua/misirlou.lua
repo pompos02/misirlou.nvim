@@ -203,7 +203,7 @@ local function set_highlights()
         LspCodeLensSeparator = { fg = palette.muted },
         LspInlayHint = { fg = palette.muted, bg = palette.muted, blend = 10 },
         LspReferenceRead = { bg = palette.highlight_med },
-        LspReferenceText = { bg = palette.highlight_med },
+        LspReferenceText = { bg = palette.highlight_med, blend = 70 },
         LspReferenceWrite = { bg = palette.highlight_med },
         Macro = { fg = palette.purple },
         Number = { fg = palette.gold },
