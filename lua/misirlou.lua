@@ -12,7 +12,7 @@ local function set_highlights()
     end
 
     local function make_border(fg)
-        fg = fg or groups.border
+        fg = utilities.parse_color(fg or groups.border)
         return {
             fg = fg,
             bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.bg or "NONE",
