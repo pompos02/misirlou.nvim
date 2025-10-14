@@ -1,7 +1,6 @@
 local options = require("misirlou.config").options
 
 local palette = {
-
     bg = "#000000",
     nc = "#000000",
     base = "#121212",
