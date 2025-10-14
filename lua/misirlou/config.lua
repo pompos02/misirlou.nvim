@@ -30,7 +30,7 @@ config.options = {
 
     ---@type table<string, string | PaletteColor>
     groups = {
-        border = "muted",
+        border = "text",
         link = "purple",
         panel = "surface",
 
