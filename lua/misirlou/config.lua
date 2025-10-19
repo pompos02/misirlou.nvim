@@ -13,6 +13,10 @@ config.options = {
     ---border characters you are using.
     extend_background_behind_borders = true,
 
+    ---Color variant to use: "misirlou" (default) or "happy"
+    ---@type "misirlou" | "happy"
+    variant = "misirlou",
+
     enable = {
         legacy_highlights = true,
         migrations = true,
