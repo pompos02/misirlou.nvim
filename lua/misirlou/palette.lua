@@ -23,24 +23,24 @@ local palettes = {
         highlight_high = "#707070",
     },
     happy = {
-        bg = "#000000",
-        nc = "#000000",
-        base = "#16151a",
-        surface = "#1c1c24",
-        overlay = "#252530",
-        muted = "#56526e",
-        subtle = "#6e6a86",
-        text = "#dbdbdb",
-        red = "#c77889",
-        gold = "#dfb591",
-        rose = "#ba8d8d",
-        blue = "#7c98b9",
-        lavender = "#9f9fcf",
-        purple = "#bb9dbd",
-        green = "#a7c1bd",
-        highlight_low = "#1a1826",
-        highlight_med = "#2a283e",
-        highlight_high = "#44415a",
+        bg = "#0a0a10",
+        nc = "#0a0a10",
+        base = "#1a1822",
+        surface = "#222232",
+        overlay = "#2b2b3e",
+        muted = "#6c6890",
+        subtle = "#8682a6",
+        text = "#f2f2f2",
+        red = "#ff6b82",
+        gold = "#f6c177",
+        rose = "#e5a1a1",
+        blue = "#8ab4f8",
+        lavender = "#b7a6f7",
+        purple = "#d38df5",
+        green = "#89f0c3",
+        highlight_low = "#1e1b2c",
+        highlight_med = "#35324e",
+        highlight_high = "#514f73",
         none = "NONE",
     },
 }
@@ -49,7 +49,7 @@ local function get_variant()
     if vim.g.colors_name == "misirlou-happy" then
         return "happy"
     end
-    
+
     return options.variant or "misirlou"
 end
 
