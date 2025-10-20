@@ -76,7 +76,7 @@ local function set_highlights()
         IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
     }
     local default_highlights = {
-        ColorColumn = { bg = palette.bg },
+        ColorColumn = { bg = palette.base },
         Conceal = { bg = "NONE" },
         CurSearch = { fg = palette.base, bg = palette.gold },
         Cursor = { fg = palette.text, bg = palette.highlight_high },
