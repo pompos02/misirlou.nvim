@@ -63,6 +63,26 @@ local palettes = {
         highlight_med = "#181616",
         highlight_high = "#625e5a",
     },
+    fox = {
+        bg = "#000000",
+        nc = "#000000",
+        base = "#232831",
+        surface = "#39404f",
+        overlay = "#444c5e",
+        muted = "#5a657d",
+        subtle = "#60728a",
+        text = "#cdcecf",
+        red = "#bf616a",
+        gold = "#ebcb8b",
+        rose = "#bf88bc",
+        blue = "#81a1c1",
+        lavender = "#b48ead",
+        purple = "#d89079",
+        green = "#a3be8c",
+        highlight_low = "#3e4a5b",
+        highlight_med = "#4f6074",
+        highlight_high = "#7e8188",
+    },
 }
 
 local function get_variant()
@@ -70,6 +90,8 @@ local function get_variant()
         return "happy"
     elseif vim.g.colors_name == "misirlou-dragon" then
         return "dragon"
+    elseif vim.g.colors_name == "misirlou-fox" then
+        return "fox"
     end
 
     return options.variant or "misirlou"
