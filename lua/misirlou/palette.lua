@@ -23,8 +23,8 @@ local palettes = {
         highlight_high = "#707070",
     },
     happy = {
-        bg = "#0a0a10",
-        nc = "#0a0a10",
+        bg = "#000000",
+        nc = "#000000",
         base = "#1a1822",
         surface = "#222232",
         overlay = "#2b2b3e",
@@ -44,8 +44,8 @@ local palettes = {
         none = "NONE",
     },
     dragon = {
-        bg = "#0d0c0c",
-        nc = "#0d0c0c",
+        bg = "#000000",
+        nc = "#000000",
         base = "#12120f",
         surface = "#1D1C19",
         overlay = "#181616",
