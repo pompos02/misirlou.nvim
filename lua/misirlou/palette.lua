@@ -22,6 +22,27 @@ local palettes = {
         highlight_med = "#282828",
         highlight_high = "#707070",
     },
+    cool = {
+        bg = "#000000",
+        nc = "#000000",
+        base = "#121212",
+        surface = "#1e1e1e",
+        overlay = "#2a2a2a",
+        muted = "#404040",
+        subtle = "#4a4a4a",
+        text = "#c0c0c0",
+        red = "#d46a6a",
+        gold = "#c9a96c",
+        rose = "#c37373",
+        blue = "#718aad",
+        lavender = "#7c7cc6",
+        purple = "#9b6f9b",
+        green = "#75a195",
+
+        highlight_low = "#1e1e1e",
+        highlight_med = "#282828",
+        highlight_high = "#707070",
+    },
     happy = {
         bg = "#000000",
         nc = "#000000",
@@ -86,7 +107,9 @@ local palettes = {
 }
 
 local function get_variant()
-    if vim.g.colors_name == "misirlou-happy" then
+    if vim.g.colors_name == "misirlou-cool" then
+        return "cool"
+    elseif vim.g.colors_name == "misirlou-happy" then
         return "happy"
     elseif vim.g.colors_name == "misirlou-dragon" then
         return "dragon"
