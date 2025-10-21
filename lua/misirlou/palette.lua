@@ -34,8 +34,8 @@ local palettes = {
         red = "#d46a6a",
         gold = "#c9a96c",
         rose = "#c37373",
-        blue = "#718aad",
-        lavender = "#7c7cc6",
+        blue = "#6a7e9b",
+        lavender = "#7979a7",
         purple = "#9b6f9b",
         green = "#75a195",
 
