@@ -1181,8 +1181,8 @@ function M.colorscheme()
         vim.cmd("hi clear")
         vim.cmd("syntax reset")
     end
-    vim.g.colors_name = "misirlou-fox"
-    vim.o.background = "dark"
+    vim.g.colors_name = "misirlou-light"
+    vim.o.background = "light"
 
     set_highlights()
 end
