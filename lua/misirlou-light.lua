@@ -10,6 +10,12 @@ local function set_highlights()
     for group, color in pairs(config.options.groups) do
         groups[group] = utilities.parse_color(color)
     end
+    
+    -- Override groups for light theme to match color semantics
+    -- In light: gold=#8ec07c (green), green=#e5c07b (yellow)
+    groups.warn = utilities.parse_color(palette.green)      -- yellow for warnings
+    groups.ok = utilities.parse_color(palette.gold)         -- green for success
+    groups.git_add = utilities.parse_color(palette.gold)    -- green for additions
 
     local function make_border(fg)
         fg = utilities.parse_color(fg or groups.border)
