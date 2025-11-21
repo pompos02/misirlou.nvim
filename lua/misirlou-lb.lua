@@ -10,12 +10,12 @@ local function set_highlights()
     for group, color in pairs(config.options.groups) do
         groups[group] = utilities.parse_color(color)
     end
-    
+
     -- Override groups for lb theme to match color semantics
     -- In lb: gold=#71b35a (green), green=#e5c07b (yellow)
-    groups.warn = utilities.parse_color(palette.green)      -- yellow for warnings
-    groups.ok = utilities.parse_color(palette.gold)         -- green for success
-    groups.git_add = utilities.parse_color(palette.gold)    -- green for additions
+    groups.warn = utilities.parse_color(palette.green) -- yellow for warnings
+    groups.ok = utilities.parse_color(palette.gold)   -- green for success
+    groups.git_add = utilities.parse_color(palette.gold) -- green for additions
 
     local function make_border(fg)
         fg = utilities.parse_color(fg or groups.border)
@@ -41,7 +41,7 @@ local function set_highlights()
         ["@parameter"] = { fg = palette.purple },
         ["@preproc"] = { link = "PreProc" },
         ["@punctuation"] = { fg = palette.text },
-        ["@punctuation.bracket"] = { link = "@punctuation" },
+        ["@punctuation.bracket"] = { fg = palette.text },
         ["@punctuation.delimiter"] = { link = "@punctuation" },
         ["@punctuation.special"] = { link = "@punctuation" },
         ["@regexp"] = { link = "String" },
@@ -82,7 +82,7 @@ local function set_highlights()
         IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
     }
     local default_highlights = {
-        ColorColumn = { bg = palette.muted },
+        ColorColumn = { bg = palette.subtle },
         Conceal = { bg = "NONE" },
         CurSearch = { fg = palette.base, bg = palette.gold },
         Cursor = { fg = palette.text, bg = palette.highlight_high },
@@ -331,9 +331,9 @@ local function set_highlights()
         ["@keyword.directive"] = { fg = palette.purple },
         ["@keyword.directive.define"] = { fg = palette.purple },
 
-        ["@punctuation.delimiter"] = { fg = palette.subtle },
-        ["@punctuation.bracket"] = { fg = palette.subtle },
-        ["@punctuation.special"] = { fg = palette.subtle },
+        ["@punctuation.delimiter"] = { fg = palette.text },
+        ["@punctuation.bracket"] = { fg = palette.text },
+        ["@punctuation.special"] = { fg = palette.text },
 
         ["@comment"] = { link = "Comment" },
 
