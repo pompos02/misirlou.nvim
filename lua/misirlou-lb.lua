@@ -40,7 +40,7 @@ local function set_highlights()
         ["@number"] = { link = "Number" },
         ["@parameter"] = { fg = palette.purple },
         ["@preproc"] = { link = "PreProc" },
-        ["@punctuation"] = { fg = palette.subtle },
+        ["@punctuation"] = { fg = palette.text },
         ["@punctuation.bracket"] = { link = "@punctuation" },
         ["@punctuation.delimiter"] = { link = "@punctuation" },
         ["@punctuation.special"] = { link = "@punctuation" },
@@ -82,7 +82,7 @@ local function set_highlights()
         IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
     }
     local default_highlights = {
-        ColorColumn = { bg = palette.base },
+        ColorColumn = { bg = palette.muted },
         Conceal = { bg = "NONE" },
         CurSearch = { fg = palette.base, bg = palette.gold },
         Cursor = { fg = palette.text, bg = palette.highlight_high },
@@ -189,7 +189,7 @@ local function set_highlights()
         Constant = { fg = palette.gold },
         Debug = { fg = palette.rose },
         Define = { fg = palette.purple },
-        Delimiter = { fg = palette.subtle },
+        Delimiter = { fg = palette.text },
         Error = { fg = palette.red },
         Exception = { fg = palette.blue },
         Float = { fg = palette.gold },
@@ -241,7 +241,7 @@ local function set_highlights()
         htmlTagN = { fg = palette.text },
         htmlTagName = { fg = palette.lavender },
 
-        markdownDelimiter = { fg = palette.subtle },
+        markdownDelimiter = { fg = palette.text },
         markdownH1 = { fg = groups.h1, bold = styles.bold },
         markdownH1Delimiter = { link = "markdownH1" },
         markdownH2 = { fg = groups.h2, bold = styles.bold },
