@@ -331,9 +331,7 @@ local function set_highlights()
         ["@keyword.directive"] = { fg = palette.purple },
         ["@keyword.directive.define"] = { fg = palette.purple },
 
-        ["@punctuation.delimiter"] = { fg = palette.text },
-        ["@punctuation.bracket"] = { fg = palette.text },
-        ["@punctuation.special"] = { fg = palette.text },
+        ["@punctuation"] = { fg = palette.text },\n        ["@punctuation.delimiter"] = { link = "@punctuation" },\n        ["@punctuation.bracket"] = { link = "@punctuation" },\n        ["@punctuation.special"] = { link = "@punctuation" },
 
         ["@comment"] = { link = "Comment" },
 
