@@ -1,3 +1,4 @@
+-- tes
 local options = require("misirlou.config").options
 
 local palettes = {
