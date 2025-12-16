@@ -13,8 +13,8 @@ config.options = {
     ---border characters you are using.
     extend_background_behind_borders = true,
 
-    ---Color variant to use: "misirlou" (default), "cool", "happy", "dragon", or "fox"
-    ---@type "misirlou" | "cool" | "happy" | "dragon" | "fox"
+    ---Color variant to use: "misirlou" (default), "sure", "resu", "cool", "happy", "dragon", "fox", "light", "lightstrong", "lb", or "lightmodus"
+    ---@type "misirlou" | "sure" | "resu" | "cool" | "happy" | "dragon" | "fox" | "light" | "lightstrong" | "lb" | "lightmodus"
     variant = "misirlou",
 
     enable = {
