@@ -184,7 +184,7 @@ local function set_highlights()
 
         Boolean = { fg = palette.rose },
         Character = { fg = palette.gold },
-        Comment = { fg = palette.muted, italic = styles.italic },
+        Comment = { fg = palette.highlight_high, italic = styles.italic },
         Conditional = { fg = palette.blue },
         Constant = { fg = palette.gold },
         Debug = { fg = palette.rose },
@@ -944,7 +944,7 @@ local function set_highlights()
         RenderMarkdownSign = { fg = palette.subtle },
         RenderMarkdownMath = { fg = palette.purple },
         RenderMarkdownIndent = { fg = palette.muted, nocombine = true },
-        RenderMarkdownHtmlComment = { fg = palette.subtle, italic = styles.italic },
+        RenderMarkdownHtmlComment = { fg = palette.highlight_high, italic = styles.italic },
         RenderMarkdownInlineHighlight = { fg = palette.text, bg = palette.highlight_low },
 
         GrugFarHelpHeader = { fg = palette.blue },
