@@ -198,10 +198,10 @@ local palettes = {
         muted = "#666666",
         subtle = "#999999",
         text = "#ffffff",
-        red = "#E51227",
+        red = "#d94c5a",
         gold = "#8ec07c",
         rose = "#56b6c2",
-        blue = "#E51227",
+        blue = "#61afef",
         lavender = "#c678dd",
         purple = "#de935f",
         green = "#e5c07b",
@@ -218,10 +218,10 @@ local palettes = {
         muted = "#666666",
         subtle = "#999999",
         text = "#F5F5F5",
-        red = "#ED1A32",
+        red = "#b53a42",
         gold = "#8ec07c",
         rose = "#56b6c2",
-        blue = "#ED1A32",
+        blue = "#b53a42",
         lavender = "#de935f",
         purple = "#C23EB6",
         green = "#e5c07b",
@@ -268,8 +268,6 @@ local function get_variant()
         return "lightstrong"
     elseif vim.g.colors_name == "misirlou-lb" then
         return "lb"
-    elseif vim.g.colors_name == "misirlou-bl" then
-        return "bl"
     elseif vim.g.colors_name == "misirlou-lightmodus" then
         return "lightmodus"
     elseif vim.g.colors_name == "misirlou-resu" then
