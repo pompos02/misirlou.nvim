@@ -209,6 +209,26 @@ local palettes = {
         highlight_med = "#2a2a2a",
         highlight_high = "#3a3a3a",
     },
+    bl = {
+        bg = "#000000",
+        nc = "#000000",
+        base = "#000000",
+        surface = "#1a1a1a",
+        overlay = "#2a2a2a",
+        muted = "#666666",
+        subtle = "#999999",
+        text = "#F5F5F5",
+        red = "#b53a42",
+        gold = "#8ec07c",
+        rose = "#56b6c2",
+        blue = "#b53a42",
+        lavender = "#de935f",
+        purple = "#C23EB6",
+        green = "#e5c07b",
+        highlight_low = "#1a1a1a",
+        highlight_med = "#2a2a2a",
+        highlight_high = "#3a3a3a",
+    },
     lightmodus = {
         bg = "#ffffff",
         nc = "#ffffff",
@@ -248,6 +268,8 @@ local function get_variant()
         return "lightstrong"
     elseif vim.g.colors_name == "misirlou-lb" then
         return "lb"
+    elseif vim.g.colors_name == "misirlou-bl" then
+        return "bl"
     elseif vim.g.colors_name == "misirlou-lightmodus" then
         return "lightmodus"
     elseif vim.g.colors_name == "misirlou-resu" then
