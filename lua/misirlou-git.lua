@@ -103,7 +103,7 @@ local function set_highlights()
         FloatTitle = { fg = palette.text, bg = palette.bg },
         FoldColumn = { fg = palette.muted, bg = palette.bg },
         Folded = { fg = palette.text, bg = palette.bg },
-        IncSearch = { fg = palette.base, bg = palette.purple },
+        IncSearch = { fg = palette.base, bg = palette.green },
         LineNr = { fg = palette.muted, bg = palette.bg },
         MatchParen = { fg = palette.lavender, bg = palette.lavender, blend = 25 },
         ModeMsg = { fg = palette.subtle },
