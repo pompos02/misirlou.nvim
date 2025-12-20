@@ -306,7 +306,7 @@ local function set_highlights()
         ["@attribute.builtin"] = { fg = palette.purple, bold = styles.bold },
         ["@property"] = { fg = palette.lavender },
 
-        ["@function"] = { fg = palette.green },
+        ["@function"] = { fg = palette.text },
         ["@function.builtin"] = { fg = palette.green, bold = styles.bold },
         ["@function.macro"] = { link = "Function" },
 
