@@ -11,6 +11,12 @@ local function set_highlights()
         groups[group] = utilities.parse_color(color)
     end
 
+    -- Override groups for des theme to match color semantics
+    -- In des: rose=#de935f (orange), gold=#8ec07c (green)
+    groups.warn = utilities.parse_color(palette.rose) -- orange for warnings
+    groups.ok = utilities.parse_color(palette.gold) -- green for success
+    groups.git_add = utilities.parse_color(palette.gold) -- green for additions
+
     local function make_border(fg)
         fg = utilities.parse_color(fg or groups.border)
         return {
