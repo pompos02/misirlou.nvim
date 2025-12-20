@@ -4,6 +4,7 @@ local config = require("misirlou.config")
 local colorschemes = {
     cool = "misirlou-cool",
     des = "misirlou-des",
+    git = "misirlou-git",
     resu = "misirlou-resu",
     dragon = "misirlou-dragon",
     lightstrong = "misirlou-lightstrong",

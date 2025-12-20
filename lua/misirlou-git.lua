@@ -38,7 +38,7 @@ local function set_highlights()
         ["@method"] = { fg = palette.rose },
         ["@namespace"] = { link = "Include" },
         ["@number"] = { link = "Number" },
-        ["@parameter"] = { fg = palette.purple },
+        ["@parameter"] = { fg = palette.text },
         ["@preproc"] = { link = "PreProc" },
         ["@punctuation"] = { fg = palette.text },
         ["@punctuation.bracket"] = { fg = palette.text },
@@ -193,7 +193,7 @@ local function set_highlights()
         Error = { fg = palette.red },
         Exception = { fg = palette.blue },
         Float = { fg = palette.gold },
-        Function = { fg = palette.rose },
+        Function = { fg = palette.lavender },
         Identifier = { fg = palette.text },
         Include = { fg = palette.blue },
         Keyword = { fg = palette.blue },
@@ -206,7 +206,7 @@ local function set_highlights()
         LspReferenceWrite = { bold = true },
         Macro = { fg = palette.purple },
         Number = { fg = palette.gold },
-        Operator = { fg = palette.text },
+        Operator = { fg = palette.lavender },
         PreCondit = { fg = palette.purple },
         PreProc = { link = "PreCondit" },
         Repeat = { fg = palette.blue },
@@ -215,7 +215,7 @@ local function set_highlights()
         SpecialComment = { fg = palette.purple },
         Statement = { fg = palette.blue, bold = styles.bold },
         StorageClass = { fg = palette.lavender },
-        String = { fg = palette.gold },
+        String = { fg = palette.lavender },
         Structure = { fg = palette.lavender },
         Tag = { fg = palette.lavender },
         Todo = { fg = palette.rose, bg = palette.rose, blend = 20 },
@@ -299,25 +299,25 @@ local function set_highlights()
         ["@number.float"] = { link = "Number" },
         ["@float"] = { link = "Number" },
 
-        ["@type"] = { fg = palette.lavender },
-        ["@type.builtin"] = { fg = palette.lavender, bold = styles.bold },
+        ["@type"] = { fg = palette.red },
+        ["@type.builtin"] = { fg = palette.red, bold = styles.bold },
 
         ["@attribute"] = { fg = palette.purple },
         ["@attribute.builtin"] = { fg = palette.purple, bold = styles.bold },
         ["@property"] = { fg = palette.lavender },
 
-        ["@function"] = { fg = palette.rose },
+        ["@function"] = { fg = palette.text },
         ["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
         ["@function.macro"] = { link = "Function" },
 
-        ["@function.method"] = { fg = palette.rose },
-        ["@function.method.call"] = { fg = palette.purple },
+        ["@function.method"] = { fg = palette.text },
+        ["@function.method.call"] = { fg = palette.text },
 
         ["@constructor"] = { fg = palette.lavender },
         ["@operator"] = { link = "Operator" },
 
         ["@keyword"] = { link = "Keyword" },
-        ["@keyword.operator"] = { fg = palette.text },
+        ["@keyword.operator"] = { fg = palette.lavender },
         ["@keyword.import"] = { fg = palette.blue },
         ["@keyword.storage"] = { fg = palette.lavender },
         ["@keyword.repeat"] = { fg = palette.blue },
@@ -1220,7 +1220,7 @@ function M.colorscheme()
         vim.cmd("hi clear")
         vim.cmd("syntax reset")
     end
-    vim.g.colors_name = "misirlou-des"
+    vim.g.colors_name = "misirlou-git"
     vim.o.background = "dark"
 
     set_highlights()
