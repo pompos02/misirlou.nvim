@@ -84,7 +84,7 @@ local function set_highlights()
     local default_highlights = {
         ColorColumn = { bg = palette.base },
         Conceal = { bg = "NONE" },
-        CurSearch = { fg = palette.base, bg = palette.gold },
+        CurSearch = { fg = palette.base, bg = palette.purple },
         Cursor = { fg = palette.text, bg = palette.highlight_high },
         CursorColumn = { bg = palette.bg },
         CursorLine = { bg = palette.surface },
@@ -144,7 +144,7 @@ local function set_highlights()
         Title = { fg = palette.lavender, bold = styles.bold },
         VertSplit = { fg = groups.border },
         Visual = { bg = palette.green, blend = 38 },
-        YankHighlight = { fg = palette.text, bg = palette.purple, blend = 50 },
+        YankHighlight = { fg = palette.text, bg = palette.green, blend = 50 },
         WarningMsg = { fg = groups.warn, bold = styles.bold },
         WildMenu = { link = "IncSearch" },
         WinBar = { fg = palette.subtle, bg = palette.bg },
