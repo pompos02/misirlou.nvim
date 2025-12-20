@@ -84,7 +84,7 @@ local function set_highlights()
     local default_highlights = {
         ColorColumn = { bg = palette.base },
         Conceal = { bg = "NONE" },
-        CurSearch = { fg = palette.base, bg = palette.purple },
+        CurSearch = { fg = palette.base, bg = palette.green },
         Cursor = { fg = palette.text, bg = palette.highlight_high },
         CursorColumn = { bg = palette.bg },
         CursorLine = { bg = palette.surface },
