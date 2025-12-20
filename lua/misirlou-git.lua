@@ -35,7 +35,7 @@ local function set_highlights()
         ["@include"] = { link = "Include" },
         ["@interface"] = { fg = palette.lavender },
         ["@macro"] = { link = "Macro" },
-        ["@method"] = { fg = palette.text },
+        ["@method"] = { fg = palette.purple },
         ["@namespace"] = { link = "Include" },
         ["@number"] = { link = "Number" },
         ["@parameter"] = { fg = palette.text },
@@ -311,7 +311,7 @@ local function set_highlights()
         ["@function.builtin"] = { fg = palette.green, bold = styles.bold },
         ["@function.macro"] = { link = "Function" },
 
-        ["@function.method"] = { fg = palette.green },
+        ["@function.method"] = { fg = palette.purple },
         ["@function.method.call"] = { fg = palette.green },
 
         ["@constructor"] = { fg = palette.lavender },
