@@ -45,8 +45,8 @@ local palettes = {
         highlight_high = "#707070",
     },
     des = {
-        bg = "#1d1d1d",
-        nc = "#1d1d1d",
+        bg = "#000000",
+        nc = "#000000",
         base = "#222222",
         surface = "#262626",
         overlay = "#2c2c2c",
