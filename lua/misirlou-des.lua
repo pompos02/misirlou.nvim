@@ -126,7 +126,7 @@ local function set_highlights()
         RedrawDebugClear = { fg = palette.base, bg = palette.gold },
         RedrawDebugComposed = { fg = palette.base, bg = palette.blue },
         RedrawDebugRecompose = { fg = palette.base, bg = palette.red },
-        Search = { fg = palette.text, bg = palette.gold, blend = 20 },
+        Search = { fg = palette.text, bg = palette.gold, blend = 80 },
         SignColumn = { fg = palette.text, bg = palette.bg },
         SpecialKey = { fg = palette.lavender },
         SpellBad = { sp = palette.subtle, undercurl = true },
