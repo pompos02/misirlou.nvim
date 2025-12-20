@@ -193,7 +193,7 @@ local function set_highlights()
         Error = { fg = palette.red },
         Exception = { fg = palette.blue },
         Float = { fg = palette.green },
-        Function = { fg = palette.text },
+        Function = { fg = palette.purple },
         Identifier = { fg = palette.text },
         Include = { fg = palette.blue },
         Keyword = { fg = palette.blue },
@@ -306,7 +306,8 @@ local function set_highlights()
         ["@attribute.builtin"] = { fg = palette.purple, bold = styles.bold },
         ["@property"] = { fg = palette.lavender },
 
-        ["@function"] = { fg = palette.text },
+        ["@function"] = { fg = palette.purple },
+        ["@function.call"] = { fg = palette.green },
         ["@function.builtin"] = { fg = palette.green, bold = styles.bold },
         ["@function.macro"] = { link = "Function" },
 

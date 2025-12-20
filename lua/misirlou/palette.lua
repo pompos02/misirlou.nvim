@@ -142,7 +142,7 @@ local palettes = {
         lavender = "#A5D6FF", --blue
         green = "#79C0FF",  --darkerblue
 
-        purple = "#b07de5", --purple
+        purple = "#D2A8FF", --purple
         highlight_low = "#232323",
         highlight_med = "#2a2a2a",
         highlight_high = "#3a3a3a",
