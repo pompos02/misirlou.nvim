@@ -31,7 +31,7 @@ return {
     "pompos02/misirlou.nvim",
     name = "misirlou",
     config = function()
-        vim.cmd("colorscheme misirlou")
+        vim.cmd("colorscheme misirlou-cool")
     end
 }
 ```
@@ -113,22 +113,22 @@ require("misirlou").setup({
         -- Override default colors (uncomment to customize)
         bg = "#000000",
         nc = "#000000",
-        base = "#16151a",
-        surface = "#1c1c24",
-        overlay = "#252530",
-        muted = "#56526e",
-        subtle = "#6e6a86",
+        base = "#121212",
+        surface = "#1e1e1e",
+        overlay = "#2a2a2a",
+        muted = "#404040",
+        subtle = "#4a4a4a",
         text = "#dbdbdb",
-        red = "#c77889",
-        gold = "#dfb591",
-        rose = "#ba8d8d",
-        blue = "#7c98b9",
-        lavender = "#9f9fcf",
-        purple = "#bb9dbd",
-        green = "#a7c1bd",
-        highlight_low = "#1a1826",
-        highlight_med = "#2a283e",
-        highlight_high = "#44415a",
+        red = "#d46a6a",
+        gold = "#c9976c",
+        rose = "#c37373",
+        blue = "#6a7e9b",
+        lavender = "#7979a7",
+        purple = "#9b6f9b",
+        green = "#75a195",
+        highlight_low = "#1e1e1e",
+        highlight_med = "#282828",
+        highlight_high = "#707070",
     },
 
     highlight_groups = {
@@ -142,29 +142,29 @@ require("misirlou").setup({
     end,
 })
 
-vim.cmd("colorscheme misirlou")
+vim.cmd("colorscheme misirlou-cool")
 ```
 
 ## Palette
 
-misirlou.nvim's color palette:
+Default `misirlou-cool` palette:
 
 | Color    | Hex       | Usage             |
 | -------- | --------- | ----------------- |
 | bg       | `#000000` | Background        |
-| base     | `#16151a` | Elevated surfaces |
-| surface  | `#1c1c24` | UI elements       |
-| overlay  | `#252530` | Overlays          |
-| muted    | `#56526e` | Muted content     |
-| subtle   | `#6e6a86` | Subtle text       |
+| base     | `#121212` | Elevated surfaces |
+| surface  | `#1e1e1e` | UI elements       |
+| overlay  | `#2a2a2a` | Overlays          |
+| muted    | `#404040` | Muted content     |
+| subtle   | `#4a4a4a` | Subtle text       |
 | text     | `#dbdbdb` | Primary text      |
-| red      | `#c77889` | Errors, deletions |
-| gold     | `#dfb591` | Warnings, strings |
-| rose     | `#ba8d8d` | Accents, changes  |
-| blue     | `#7c98b9` | Keywords, info    |
-| lavender | `#9f9fcf` | Types, classes    |
-| purple   | `#bb9dbd` | Functions, hints  |
-| green    | `#a7c1bd` | Success states    |
+| red      | `#d46a6a` | Errors, deletions |
+| gold     | `#c9976c` | Warnings, strings |
+| rose     | `#c37373` | Accents, changes  |
+| blue     | `#6a7e9b` | Keywords, info    |
+| lavender | `#7979a7` | Types, classes    |
+| purple   | `#9b6f9b` | Functions, hints  |
+| green    | `#75a195` | Success states    |
 
 ## Features
 

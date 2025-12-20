@@ -13,9 +13,9 @@ config.options = {
     ---border characters you are using.
     extend_background_behind_borders = true,
 
-    ---Color variant to use: "misirlou" (default), "sure", "resu", "cool", "happy", "dragon", "fox", "light", "lightstrong", "lb", "bl", or "lightmodus"
-    ---@type "misirlou" | "sure" | "resu" | "cool" | "happy" | "dragon" | "fox" | "light" | "lightstrong" | "lb" | "bl" | "lightmodus"
-    variant = "misirlou",
+    ---Color variant to use: "cool" (default), "resu", "dragon", "lightstrong", or "lb"
+    ---@type "cool" | "resu" | "dragon" | "lightstrong" | "lb"
+    variant = "cool",
 
     enable = {
         legacy_highlights = true,
