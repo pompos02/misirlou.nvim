@@ -217,7 +217,7 @@ local function set_highlights()
         StorageClass = { fg = palette.lavender },
         String = { fg = palette.gold },
         Structure = { fg = palette.lavender },
-        Tag = { fg = palette.lavender },
+        Tag = { fg = palette.text },
         Todo = { fg = palette.rose, bg = palette.rose, blend = 20 },
         Type = { fg = palette.lavender },
         TypeDef = { link = "Type" },
@@ -229,7 +229,7 @@ local function set_highlights()
 
         htmlArg = { fg = palette.purple },
         htmlBold = { bold = styles.bold },
-        htmlEndTag = { fg = palette.subtle },
+        htmlEndTag = { fg = palette.text },
         htmlH1 = { link = "markdownH1" },
         htmlH2 = { link = "markdownH2" },
         htmlH3 = { link = "markdownH3" },
@@ -237,9 +237,9 @@ local function set_highlights()
         htmlH5 = { link = "markdownH5" },
         htmlItalic = {},
         htmlLink = { link = "markdownUrl" },
-        htmlTag = { fg = palette.subtle },
+        htmlTag = { fg = palette.text },
         htmlTagN = { fg = palette.text },
-        htmlTagName = { fg = palette.lavender },
+        htmlTagName = { fg = palette.text },
 
         markdownDelimiter = { fg = palette.text },
         markdownH1 = { fg = groups.h1, bold = styles.bold },
@@ -386,7 +386,7 @@ local function set_highlights()
 
         ["@tag"] = { link = "Tag" },
         ["@tag.attribute"] = { fg = palette.purple },
-        ["@tag.delimiter"] = { fg = palette.subtle },
+        ["@tag.delimiter"] = { fg = palette.text },
 
         ["@conceal"] = { link = "Conceal" },
         ["@conceal.markdown"] = { fg = palette.subtle },
