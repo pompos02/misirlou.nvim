@@ -182,11 +182,11 @@ local function set_highlights()
         DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 10 },
         DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
 
-        Boolean = { fg = palette.rose },
+        Boolean = { fg = palette.green },
         Character = { fg = palette.gold },
         Comment = { fg = palette.subtle, italic = styles.italic },
         Conditional = { fg = palette.blue },
-        Constant = { fg = palette.gold },
+        Constant = { fg = palette.green },
         Debug = { fg = palette.rose },
         Define = { fg = palette.purple },
         Delimiter = { fg = palette.text },
@@ -205,7 +205,7 @@ local function set_highlights()
         LspReferenceText = { bold = true },
         LspReferenceWrite = { bold = true },
         Macro = { fg = palette.purple },
-        Number = { fg = palette.gold },
+        Number = { fg = palette.green },
         Operator = { fg = palette.lavender },
         PreCondit = { fg = palette.purple },
         PreProc = { link = "PreCondit" },
@@ -272,8 +272,8 @@ local function set_highlights()
 
         ["@variable"] = { fg = palette.text },
         ["@variable.builtin"] = { fg = palette.red, bold = styles.bold },
-        ["@variable.parameter"] = { fg = palette.purple },
-        ["@variable.parameter.builtin"] = { fg = palette.purple, bold = styles.bold },
+        ["@variable.parameter"] = { fg = palette.text },
+        ["@variable.parameter.builtin"] = { fg = palette.text, bold = styles.bold },
         ["@variable.member"] = { fg = palette.lavender },
 
         ["@constant"] = { fg = palette.gold },
