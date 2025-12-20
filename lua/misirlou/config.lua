@@ -13,8 +13,8 @@ config.options = {
     ---border characters you are using.
     extend_background_behind_borders = true,
 
-    ---Color variant to use: "cool" (default), "resu", "dragon", "lightstrong", or "lb"
-    ---@type "cool" | "resu" | "dragon" | "lightstrong" | "lb"
+    ---Color variant to use: "cool" (default), "des", "resu", "dragon", "lightstrong", or "lb"
+    ---@type "cool" | "des" | "resu" | "dragon" | "lightstrong" | "lb"
     variant = "cool",
 
     enable = {
