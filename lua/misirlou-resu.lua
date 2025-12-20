@@ -35,7 +35,7 @@ local function set_highlights()
         ["@parameter"] = { fg = palette.purple },
         ["@preproc"] = { link = "PreProc" },
         ["@punctuation"] = { fg = palette.text },
-        ["@punctuation.bracket"] = { link = "@punctuation" },
+        ["@punctuation.bracket"] = { fg = palette.text },
         ["@punctuation.delimiter"] = { link = "@punctuation" },
         ["@punctuation.special"] = { link = "@punctuation" },
         ["@regexp"] = { link = "String" },
@@ -235,7 +235,7 @@ local function set_highlights()
         htmlTagN = { fg = palette.text },
         htmlTagName = { fg = palette.lavender },
 
-        markdownDelimiter = { fg = palette.subtle },
+        markdownDelimiter = { fg = palette.text },
         markdownH1 = { fg = groups.h1, bold = styles.bold },
         markdownH1Delimiter = { link = "markdownH1" },
         markdownH2 = { fg = groups.h2, bold = styles.bold },
@@ -325,9 +325,10 @@ local function set_highlights()
         ["@keyword.directive"] = { fg = palette.purple },
         ["@keyword.directive.define"] = { fg = palette.purple },
 
-        ["@punctuation.delimiter"] = { fg = palette.text },
-        ["@punctuation.bracket"] = { fg = palette.text },
-        ["@punctuation.special"] = { fg = palette.text },
+        ["@punctuation"] = { fg = palette.text },
+        ["@punctuation.delimiter"] = { link = "@punctuation" },
+        ["@punctuation.bracket"] = { link = "@punctuation" },
+        ["@punctuation.special"] = { link = "@punctuation" },
 
         ["@comment"] = { link = "Comment" },
 
@@ -699,7 +700,7 @@ local function set_highlights()
         NavicIconsNull = { fg = palette.red },
         NavicIconsNumber = { fg = palette.gold },
         NavicIconsObject = { fg = palette.gold },
-        NavicIconsOperator = { fg = palette.text },
+        NavicIconsOperator = { fg = palette.subtle },
         NavicIconsPackage = { fg = palette.muted },
         NavicIconsProperty = { fg = palette.lavender },
         NavicIconsString = { fg = palette.gold },
