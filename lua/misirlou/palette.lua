@@ -136,7 +136,7 @@ local palettes = {
         text = "#e0e0e0",
         red = "#e56c6c", --red 
         gold = "#8ec07c", --green
-        rose = "#FAE250", --orage
+        rose = "#FFA657", --orage
         blue = "#FF7B72", --red
 
         lavender = "#A5D6FF", --blue
