@@ -346,6 +346,17 @@ local function set_highlights()
         ["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 15 },
         ["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 15 },
 
+        -- YAML-specific Treesitter overrides for better contrast
+        ["@property.yaml"] = { fg = palette.purple },
+        ["@string.yaml"] = { fg = palette.lavender },
+        ["@string.escape.yaml"] = { fg = palette.blue },
+        ["@number.yaml"] = { fg = palette.gold },
+        ["@boolean.yaml"] = { fg = palette.rose },
+        ["@constant.builtin.yaml"] = { fg = palette.red },
+        ["@label.yaml"] = { fg = palette.blue },
+        ["@type.yaml"] = { fg = palette.purple },
+        ["@keyword.directive.yaml"] = { fg = palette.purple },
+
         ["@markup.strong"] = { bold = styles.bold },
         ["@markup.italic"] = {},
         ["@markup.strikethrough"] = { strikethrough = true },
